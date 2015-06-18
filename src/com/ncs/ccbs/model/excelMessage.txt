@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <Header>
+      <StreamingNo>17062015151659</StreamingNo>
+      <TimeStamp>17/06/2015 15:16:59</TimeStamp>
+      <ActionType>6</ActionType>
+   </Header>
+   <Body>
+      <CustomerInfo>
+         <CustID>628</CustID>
+         <CustTelNum>0912400604</CustTelNum>
+         <ExtAttributes>
+            <EmpName>Nhanvien522</EmpName>
+            <EmpTelNum>914000522</EmpTelNum>
+            <ExtNumber>522</ExtNumber>
+            <PackageType>E1</PackageType>
+            <EmpPosition>1</EmpPosition>
+            <EmpDivision>KT01</EmpDivision>
+            <ChangeInfo>2</ChangeInfo>
+            <ExtStatus>1</ExtStatus>
+         </ExtAttributes>
+      </CustomerInfo>
+   </Body>
+</root>
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+   <Header>
+      <StreamingNo>16062015100839</StreamingNo>
+      <TimeStamp>16/06/2015 10:08:39</TimeStamp>
+      <ActionType>6</ActionType>
+   </Header>
+   <Body>
+      <CustomerInfo>
+         <CustID>10368</CustID>
+         <CustTelNum>0945867722</CustTelNum>
+         <ExtAttributes>
+            <EmpName>Huỳnh Văn Quang</EmpName>
+            <EmpTelNum>911500224</EmpTelNum>
+            <ExtNumber>2451</ExtNumber>
+            <PackageType>E1</PackageType>
+            <EmpPosition>1</EmpPosition>
+            <EmpDivision>BTS TT Long Bình An Phú AG</EmpDivision>
+            <ChangeInfo>1</ChangeInfo>
+            <ExtStatus>1</ExtStatus>
+         </ExtAttributes>
+      </CustomerInfo>
+   </Body>
+</root>
