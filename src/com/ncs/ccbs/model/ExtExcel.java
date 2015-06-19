@@ -24,8 +24,10 @@ public class ExtExcel {
 	private String depart;
 	/** 0:Nhan vien : 1 truong phong : 2 Lanh Dao */
 	private String level;
-	// <CustID>668</CustID>
+	/** <CustID>668</CustID> */
 	private String custID;
+	/** 1 : Dang ky | 3 : Huy */
+	private String extStatus;
 	@SuppressWarnings("unused")
 	private static org.apache.log4j.Logger logger = org.apache.log4j.Logger
 			.getLogger(ExcelUtil.class);
@@ -85,6 +87,11 @@ public class ExtExcel {
 				+ level + "]";
 	}
 
+	/**
+	 * Tra ve noi dung ban tin XML dung de gui len CCBS
+	 * 
+	 * @return tra ve ban tin XML
+	 */
 	public String toStringXML() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("<?xmlversion=\"1.0\"encoding=\"UTF-8\"?>");
@@ -98,17 +105,17 @@ public class ExtExcel {
 		builder.append("</Header>");
 		builder.append("<Body>");
 		builder.append("<CustomerInfo>");
-		builder.append("<CustID>" + getCustID() + "</CustID>");
-		builder.append("<CustTelNum>" + hotline + "</CustTelNum>");
+		builder.append("<CustID>" + this.getCustID() + "</CustID>");
+		builder.append("<CustTelNum>" + this.hotline + "</CustTelNum>");
 		builder.append("<ExtAttributes>");
-		builder.append("<EmpName>" + name + "</EmpName>");
-		builder.append("<EmpTelNum>" + phone + "</EmpTelNum>");
-		builder.append("<ExtNumber>" + extNo + "</ExtNumber>");
+		builder.append("<EmpName>" + this.name + "</EmpName>");
+		builder.append("<EmpTelNum>" + this.phone + "</EmpTelNum>");
+		builder.append("<ExtNumber>" + this.extNo + "</ExtNumber>");
 		builder.append("<PackageType>E1</PackageType>");
-		builder.append("<EmpPosition>" + level + "</EmpPosition>");
-		builder.append("<EmpDivision>" + depart + "</EmpDivision>");
+		builder.append("<EmpPosition>" + this.level + "</EmpPosition>");
+		builder.append("<EmpDivision>" + this.depart + "</EmpDivision>");
 		builder.append("<ChangeInfo>0</ChangeInfo>");
-		builder.append("<ExtStatus>1</ExtStatus>");
+		builder.append("<ExtStatus>"+this.extStatus+"</ExtStatus>");
 		builder.append("</ExtAttributes>");
 		builder.append("</CustomerInfo>");
 		builder.append("</Body>");
@@ -121,6 +128,14 @@ public class ExtExcel {
 			this.custID = ExtExcelDao.getECCompanyCode(this.hotline);
 		}
 		return custID;
+	}
+
+	public String getExtStatus() {
+		return extStatus;
+	}
+
+	public void setExtStatus(String extStatus) {
+		this.extStatus = extStatus;
 	}
 
 }

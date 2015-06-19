@@ -18,6 +18,7 @@ import org.apache.poi.ss.usermodel.Row;
 
 import vn.meg.bossservice.vnp.CallWebService;
 
+import com.ncs.ccbs.dao.ExtExcelDao;
 import com.ncs.ccbs.model.ExtExcel;
 
 /**
@@ -38,6 +39,13 @@ public class ExcelUtil {
 	 *            : excel file chua du lieu
 	 */
 	public static void read(String fileName) {
+		String extStatus = "1";
+		if (fileName.toLowerCase().contains("ext_add.xls")) {
+			extStatus = "1";
+		} else if (fileName.toLowerCase().contains("ext_del.xls")) {
+			extStatus = "3";
+		}
+
 		try {
 
 			FileInputStream file = new FileInputStream(new File(fileName));
@@ -55,13 +63,8 @@ public class ExcelUtil {
 				// For each row, iterate through each columns
 				ExtExcel extExcel = getExtExcelByIteratorCell(rowIterator
 						.next().cellIterator());
-				// Request message
-				String req = extExcel.toStringXML();
-				logger.info("Request : " + (i) + "\n" + req + "\n");
-				// Respone message
-				String res = CallWebService.send(req);
-				logger.info("Response : " + (i) + "\n" + res + "\n\n");
-				Print.println("------------------------------------------------------");
+				extExcel.setExtStatus(extStatus);
+				ExtExcelDao.addExt(i, extExcel);
 				i++;
 
 			}
@@ -74,6 +77,13 @@ public class ExcelUtil {
 		}
 	}
 
+	/**
+	 * Lay thong tin may le
+	 * 
+	 * @param cellIterator
+	 *            danh sach cot trong 1 dong excel
+	 * @return ExtExcel thoong tin may le
+	 */
 	private static ExtExcel getExtExcelByIteratorCell(
 			Iterator<Cell> cellIterator) {
 		ExtExcel extExcel = new ExtExcel();
@@ -97,6 +107,13 @@ public class ExcelUtil {
 		return extExcel;
 	}
 
+	/**
+	 * Lay gia tri
+	 * 
+	 * @param cell
+	 *            ten cot
+	 * @return gia tri cot
+	 */
 	private static String getCellValueString(Cell cell) {
 		String value = null;
 

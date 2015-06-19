@@ -1,4 +1,5 @@
 package com.ncs.ccbs.util;
+
 /**
  * 
  * @author HoanPV
@@ -6,6 +7,11 @@ package com.ncs.ccbs.util;
  *
  */
 public class Print {
+	/**
+	 * Print to console
+	 * 
+	 * @param displayString
+	 */
 	public static void println(String displayString) {
 		System.out.println(displayString);
 	}

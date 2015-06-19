@@ -20,7 +20,8 @@ public class ConstantFile {
 	private static String EXT_STOP = "Ext_Stop.txt";
 	private static String REACTIVE_MAIN_MEG = "ReActive_Main_MEG.txt";
 	private static String STOP_MAIN_MEG = "Stop_Main_MEG.txt";
-	private static String ADD_EXCEL = "Upload.xls";
+	private static String EXT_ADD_EXCEL = "Ext_Add.xls";
+	private static String EXT_DEL_EXCEL = "Ext_Del.xls";
 	private static String CONFIGURATION_FILE_DATABASE = "config.properties";
 	private static String SERVICES_PROPERTIES = "services.properties";
 
@@ -81,12 +82,16 @@ public class ConstantFile {
 		return currentRootDirectoryPath() + STOP_MAIN_MEG;
 	}
 
-	public static String getADD_EXCEL() {
-		return currentRootDirectoryPath() + ADD_EXCEL;
+	public static String getEXT_ADD_EXCEL() {
+		return currentRootDirectoryPath() + EXT_ADD_EXCEL;
 	}
 
 	public static String getSERVICES_PROPERTIES() {
 		return currentRootDirectoryPath() + SERVICES_PROPERTIES;
+	}
+
+	public static String getEXT_DEL_EXCEL() {
+		return currentRootDirectoryPath() + EXT_DEL_EXCEL;
 	}
 
 }

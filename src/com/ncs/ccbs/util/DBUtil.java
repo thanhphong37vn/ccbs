@@ -33,32 +33,44 @@ public class DBUtil {
 	static {
 		FileInputStream fis = null;
 		file = new File(ConstantFile.getCONFIGURATION_FILE_DATABASE());
-		try {
-			fis = new FileInputStream(file);
-			InputStreamReader isr = new InputStreamReader(fis);
-			@SuppressWarnings("resource")
-			BufferedReader reader = new BufferedReader(isr);
-			DB_JDBC_URL = reader.readLine().split("=")[1].trim();
-			DB_USER = reader.readLine().split("=")[1].trim();
-			DB_PASSWORD = reader.readLine().split("=")[1].trim();
-			DB_DRIVER = reader.readLine().split("=")[1].trim();
-			connection = getConnection();
-		} catch (FileNotFoundException e) {
-			logger.error("Khong tim thay file "
-					+ ConstantFile.getCONFIGURATION_FILE_DATABASE());
-		} catch (IOException e) {
-			logger.error("Loi file cau hinh "
-					+ ConstantFile.getCONFIGURATION_FILE_DATABASE());
-		} finally {
+		if (file.exists() && !file.isDirectory()) {
 			try {
-				if (fis != null) {
-					fis.close();
-				}
-			} catch (IOException e) {
-				logger.error("Loi dong file  "
+				logger.info("File cau hinh Database :   "
 						+ ConstantFile.getCONFIGURATION_FILE_DATABASE());
-			}
+				fis = new FileInputStream(file);
+				InputStreamReader isr = new InputStreamReader(fis);
+				@SuppressWarnings("resource")
+				BufferedReader reader = new BufferedReader(isr);
+				DB_JDBC_URL = reader.readLine().split("=")[1].trim();
+				DB_USER = reader.readLine().split("=")[1].trim();
+				DB_PASSWORD = reader.readLine().split("=")[1].trim();
+				DB_DRIVER = reader.readLine().split("=")[1].trim();
+				connection = getConnection();
+				logger.info("Da dong connection chua ?  :   "
+						+ connection.isClosed());
+			} catch (FileNotFoundException e) {
+				logger.error("Khong tim thay file "
+						+ ConstantFile.getCONFIGURATION_FILE_DATABASE());
+			} catch (IOException e) {
+				logger.error("Loi file cau hinh "
+						+ ConstantFile.getCONFIGURATION_FILE_DATABASE());
+			} catch (SQLException e) {
+				logger.error("Loi tao ket noi "
+						+ ConstantFile.getCONFIGURATION_FILE_DATABASE());
+			} finally {
+				try {
+					if (fis != null) {
+						fis.close();
+					}
+				} catch (IOException e) {
+					logger.error("Loi dong file  "
+							+ ConstantFile.getCONFIGURATION_FILE_DATABASE());
+				}
 
+			}
+		} else {
+			logger.error("File khong ton tai :   "
+					+ ConstantFile.getCONFIGURATION_FILE_DATABASE());
 		}
 	}
 
@@ -74,7 +86,7 @@ public class DBUtil {
 				connection = DriverManager.getConnection(DB_JDBC_URL, DB_USER,
 						DB_PASSWORD);
 			} catch (ClassNotFoundException e) {
-				logger.error("Loi " + DB_DRIVER);
+				logger.error("Loi thong tin ket noi : " + DB_DRIVER);
 			} catch (SQLException e) {
 				logger.error("Khong ket noi duoc co so du lieu !");
 			}
