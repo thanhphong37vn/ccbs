@@ -1,150 +1,143 @@
 package com.ncs.ccbs.run;
-
 import com.ncs.ccbs.util.ConfigUtil;
 import com.ncs.ccbs.util.ConstantFile;
 import com.ncs.ccbs.util.DBUtil;
 import com.ncs.ccbs.util.ExcelUtil;
-import com.ncs.ccbs.util.Input;
-import com.ncs.ccbs.util.Print;
-
+import com.ncs.ccbs.util.InputUtil;
+import com.ncs.ccbs.util.PrintUtil;
 /**
- * <h1>System City Management</h1> <br/>
- * <br/>
- * The System City Management program implements an application that<br/>
+ * Title : System Meg Register Extention Managerment<br/>
+ * Description : Phan mem quan ly may le he thong MEG thuc hien cac chuc nang<br/>
+ * ==========Menu==============<br/>
+ * -------<br/>
+ * 11.Customer Account Change<br/>
+ * 12.Customer Account Open<br/>
+ * -------<br/>
+ * 21.Ext Add<br/>
+ * 22.Ext Change Mapping<br/>
+ * 23.Ext Drop<br/>
+ * 24.Ext Edit<br/>
+ * 25.Ext ReActive<br/>
+ * 26.Ext Stop<br/>
+ * -------<br/>
+ * 31.Main MEG Drop<br/>
+ * 32.Main MEG ReActive<br/>
+ * 33.Main MEG Stop<br/>
+ * -------<br/>
+ * 0. Exit<br/>
+ * Copyright : Copyright (c) 2015<br/>
+ * Company : NCS <br/>
+ * Create on Jul 14, 2015 10:28:38 AM<br/>
  * 
- * 1. Input information for n countries of Asia<br/>
- * 2. Display information<br/>
- * 3. Sort descending by area and display result<br/>
- * 4. Sort ascending by area and display result<br/>
- * 5. Find information by countryName<br/>
- * 6. Exit<br/>
- * 
- * 
- * @author Admin
- * @version v.05.30
- * @since 2015-05-30
- * 
- */
-/**
- * 
- * @author HoanPV
- * @version Jun 18, 2015
- *
+ * @author <a href="mailto:hoanpmp@gmail.com">HoanPham</a>
+ * @version Jul 14, 2015 10:28:38 AM
  */
 public class Main {
-	private static org.apache.log4j.Logger logger = org.apache.log4j.Logger
-			.getLogger(Main.class);
-
+	private static org.apache.log4j.Logger	logger	=org.apache.log4j.Logger
+	                                                   .getLogger(Main.class);
 	/**
 	 * Display menu list and return your choose
 	 * 
 	 * @return int : chose of user from screen
 	 */
 	public static int doMenu() {
-
 		/** Print menu on standard output */
-		Print.println("==========Menu==============");
-		Print.println("1	Customer Account Change");
-		Print.println("2	Customer Account Open ");
-		Print.println("3	DROP Main MEG ");
-		Print.println("4	Ext Add ");
-		Print.println("5	Ext Change Mapping ");
-		Print.println("6	Ext Drop ");
-		Print.println("7	Ext Edit ");
-		Print.println("8	Ext ReActive ");
-		Print.println("9	Ext Stop ");
-		Print.println("10	ReActive Main MEG ");
-		Print.println("11	Stop Main MEG ");
-		Print.println("12	Add Ext Excel");
-		Print.println("13	Del Ext Excel");
-		Print.println("-------");
-		Print.println("0	Exit");
-
+		PrintUtil.println("==========Menu==============");
+		PrintUtil.println("-------");
+		PrintUtil.println("11.Customer Account Change");
+		PrintUtil.println("12.Customer Account Open");
+		PrintUtil.println("-------");
+		PrintUtil.println("21.Ext Add");
+		PrintUtil.println("22.Ext Change Mapping");
+		PrintUtil.println("23.Ext Drop");
+		PrintUtil.println("24.Ext Edit");
+		PrintUtil.println("25.Ext ReActive");
+		PrintUtil.println("26.Ext Stop");
+		PrintUtil.println("-------");
+		PrintUtil.println("31.Main MEG Drop");
+		PrintUtil.println("32.Main MEG ReActive");
+		PrintUtil.println("33.Main MEG Stop");
+		PrintUtil.println("-------");
+		PrintUtil.println("0.	Exit");
 		// get chose from console
-		return Input.getNumberInput();
-
+		return InputUtil.getNumberInput();
 	}
-
 	/**
 	 * This is method main which makes use of Main.
 	 * 
 	 * @return nothing
-	 * 
 	 * @param args
-	 *            Unused
-	 * @throws InterruptedException
-	 * @exception No
-	 *                Exception
-	 * @see Exeption
-	 * 
+	 *          Unused
 	 */
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args)
+	    throws InterruptedException {
 		logger.info("Configuring ...");
-		if (ConfigUtil.isReady()) {
-			int chose = 0;
+		if(ConfigUtil.isReady()) {
+			int chose=0;
 			do {
-				chose = doMenu();
-				switch (chose) {
-				case 1:
-					logger.info("1	Customer Account Change ");
-					break;
-				case 2:
-					logger.info("2	Customer Account Open ");
-					break;
-				case 3:
-					logger.info("3	DROP Main MEG ");
-					break;
-				case 4:
-					logger.info("4	Ext Add ");
-					break;
-				case 5:
-					logger.info("5	Ext Change Mapping ");
-					break;
-				case 6:
-					logger.info("6	Ext Drop ");
-					break;
-				case 7:
-					logger.info("7	Ext Edit ");
-					break;
-				case 8:
-					logger.info("8	Ext ReActive ");
-					break;
-				case 9:
-					logger.info("9	Ext Stop ");
-					break;
-				case 10:
-					logger.info("10	ReActive Main MEG ");
-					break;
-				case 11:
-					logger.info("11	Stop Main MEG ");
-					break;
-				case 12:
-					logger.info("12	Add Excel");
-					logger.info("Duong dan add Excel: "
-							+ ConstantFile.getEXT_ADD_EXCEL());
-					ExcelUtil.read(ConstantFile.getEXT_ADD_EXCEL());
-					break;
-				case 13:
-					logger.info("13	Del Excel");
-					logger.info("Duong dan del Excel: "
-							+ ConstantFile.getEXT_DEL_EXCEL());
-					ExcelUtil.read(ConstantFile.getEXT_DEL_EXCEL());
-					break;
-				case 0:
-					logger.info("System exited");
-					System.exit(0);
-					break;
-				default:
-					chose = doMenu();
-					break;
+				chose=doMenu();
+				switch(chose){
+					case 11:
+						logger.info("11.Customer Account Change");
+						break;
+					case 12:
+						logger.info("12.Customer Account Open");
+						break;
+					case 21:
+						logger.info("21	Add Excel");
+						logger.info(ConstantFile.getExt_Add());
+						ExcelUtil.read(ConstantFile.getExt_Add());
+						break;
+					case 22:
+						logger.info("22.Ext Change Mapping");
+						logger.info(ConstantFile
+						    .getExt_Change_Mapping());
+						ExcelUtil.read(ConstantFile
+						    .getExt_Change_Mapping());
+						break;
+					case 23:
+						logger.info("23.Ext Drop");
+						logger.info(ConstantFile.getExt_Drop());
+						ExcelUtil.read(ConstantFile.getExt_Drop());
+						break;
+					case 24:
+						logger.info("24.Ext Edit");
+						logger.info(ConstantFile.getExt_Edit());
+						ExcelUtil.read(ConstantFile.getExt_Edit());
+						break;
+					case 25:
+						logger.info("25.Ext ReActive");
+						logger.info(ConstantFile.getExt_ReActive());
+						ExcelUtil.read(ConstantFile.getExt_ReActive());
+						break;
+					case 26:
+						logger.info("26.Ext Stop");
+						logger.info(ConstantFile.getExt_Stop());
+						ExcelUtil.read(ConstantFile.getExt_Stop());
+						break;
+					case 31:
+						logger.info("31.Main MEG Drop");
+						break;
+					case 32:
+						logger.info("32.Main MEG ReActive");
+						break;
+					case 33:
+						logger.info("33.Main MEG Stop");
+						break;
+					case 0:
+						logger.info("System exited");
+						System.exit(0);
+						break;
+					default:
+						chose=doMenu();
+						break;
 				}
-			} while (chose > 0 || chose < 12);
+			} while(chose>0||chose<12);
 		}
 		DBUtil.closeConnection(DBUtil.connection);
 		logger.info("System exiting ...");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		logger.info("System exited");
 		System.exit(0);
 	}
-
 }
