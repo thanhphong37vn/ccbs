@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Header>
+		<StreamingNo>SC912400605</StreamingNo>
+		<TimeStamp>2013:11:13 16:29:59</TimeStamp>
+		<ActionType>1</ActionType>
+	</Header>
+	<Body>
+		<CustomerInfo>
+			<CustID>0912400602</CustID>
+			<CustName>Phong KTNV - VNP</CustName>
+			<CustManager>VNP</CustManager>
+			<Position>Director</Position>
+			<Paperwork>Giấy phép kinh doanh</Paperwork>
+			<LicenseNo>GPDK123</LicenseNo>
+			<DateOfIssue>20120910</DateOfIssue>
+			<IssuedBy>Sở kế hoạch đầu tư Hà nội</IssuedBy>
+			<TaxCode>-</TaxCode>
+			<TradeType>telecom</TradeType>
+			<CustTelNum>0912400602</CustTelNum>
+			<AreaCode>4</AreaCode>
+			<CustEmail>phong.bh@ncsmedia.com.vn</CustEmail>
+			<CustFax>438359165</CustFax>
+			<Description>MEG</Description>
+			<WebsiteUrl>ncsmedia.com.vn</WebsiteUrl>
+			<CustAddress>299 Trung kinh</CustAddress>
+			<BillingAddress>299 Trung kinh</BillingAddress>
+			<AdminName>gamht</AdminName>
+			<AdminTel>0989055454</AdminTel>
+			<AdminEmail>phong.bh@ncsmedia.com.vn</AdminEmail>
+			<AdminPosition>Employee</AdminPosition>
+			<PaymentMethod>P1</PaymentMethod>
+			<NoticeMethod>N1</NoticeMethod>
+			<Agency>1-1</Agency>
+		</CustomerInfo>
+		<Purchase>
+			<FeeNumber>0912400602</FeeNumber>
+			<CustIsFree>1</CustIsFree>
+			<SetupFee>100000</SetupFee>
+			<MaintainFee>300000</MaintainFee>
+			<PackageType>A1</PackageType>
+			<PackageName>ALO1</PackageName>
+			<SubscriberFee>45000</SubscriberFee>
+			<FreeMinutes>2000</FreeMinutes>
+			<ExtraAttributes>
+				<PackageExtra>V1</PackageExtra>
+				<ExtraFee>400000</ExtraFee>
+				<ExtraFreeMinutes>500</ExtraFreeMinutes>
+			</ExtraAttributes>
+			<PurchaseAttributes>
+				<AttributeID>G1</AttributeID>
+				<AttributeValue>ConferenceCall</AttributeValue>
+				<IsActive>1</IsActive>
+			</PurchaseAttributes>
+			<PurchaseAttributes>
+				<AttributeID>G2</AttributeID>
+				<AttributeValue>Enhanced Management Service</AttributeValue>
+				<IsActive>1</IsActive>
+			</PurchaseAttributes>
+			<PurchaseAttributes>
+				<AttributeID>G3</AttributeID>
+				<AttributeValue>e-Sale</AttributeValue>
+				<IsActive>1</IsActive>
+			</PurchaseAttributes>
+		</Purchase>
+	</Body>
+</root>

@@ -30,7 +30,7 @@ import com.ncs.ccbs.util.PrintUtil;
  * Create on Jul 14, 2015 10:28:38 AM<br/>
  * 
  * @author <a href="mailto:hoanpmp@gmail.com">HoanPham</a>
- * @version Jul 14, 2015 10:28:38 AM
+ * @version 2015.1.0.1
  */
 public class Main {
 	private static org.apache.log4j.Logger	logger	=org.apache.log4j.Logger
@@ -86,43 +86,58 @@ public class Main {
 					case 21:
 						logger.info("21	Add Excel");
 						logger.info(ConstantFile.getExt_Add());
-						ExcelUtil.read(ConstantFile.getExt_Add());
+						ExcelUtil.readExtFromExcel(ConstantFile
+						    .getExt_Add());
 						break;
 					case 22:
 						logger.info("22.Ext Change Mapping");
 						logger.info(ConstantFile
 						    .getExt_Change_Mapping());
-						ExcelUtil.read(ConstantFile
+						ExcelUtil.readExtFromExcel(ConstantFile
 						    .getExt_Change_Mapping());
 						break;
 					case 23:
 						logger.info("23.Ext Drop");
 						logger.info(ConstantFile.getExt_Drop());
-						ExcelUtil.read(ConstantFile.getExt_Drop());
+						ExcelUtil.readExtFromExcel(ConstantFile
+						    .getExt_Drop());
 						break;
 					case 24:
 						logger.info("24.Ext Edit");
 						logger.info(ConstantFile.getExt_Edit());
-						ExcelUtil.read(ConstantFile.getExt_Edit());
+						ExcelUtil.readExtFromExcel(ConstantFile
+						    .getExt_Edit());
 						break;
 					case 25:
 						logger.info("25.Ext ReActive");
 						logger.info(ConstantFile.getExt_ReActive());
-						ExcelUtil.read(ConstantFile.getExt_ReActive());
+						ExcelUtil.readExtFromExcel(ConstantFile
+						    .getExt_ReActive());
 						break;
 					case 26:
 						logger.info("26.Ext Stop");
 						logger.info(ConstantFile.getExt_Stop());
-						ExcelUtil.read(ConstantFile.getExt_Stop());
+						ExcelUtil.readExtFromExcel(ConstantFile
+						    .getExt_Stop());
 						break;
 					case 31:
 						logger.info("31.Main MEG Drop");
+						logger.info(ConstantFile.getMain_MEG_Drop());
+						ExcelUtil.readComFromExcel(ConstantFile
+						    .getMain_MEG_Drop());
 						break;
 					case 32:
 						logger.info("32.Main MEG ReActive");
+						logger
+						    .info(ConstantFile.getMain_MEG_ReActive());
+						ExcelUtil.readComFromExcel(ConstantFile
+						    .getMain_MEG_ReActive());
 						break;
 					case 33:
 						logger.info("33.Main MEG Stop");
+						logger.info(ConstantFile.getMain_MEG_Stop());
+						ExcelUtil.readComFromExcel(ConstantFile
+						    .getMain_MEG_Stop());
 						break;
 					case 0:
 						logger.info("System exited");

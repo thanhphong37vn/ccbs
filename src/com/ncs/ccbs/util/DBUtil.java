@@ -19,7 +19,7 @@ import java.sql.Statement;
  * Create on Jul 14, 2015 11:03:51 AM<br/>
  * 
  * @author <a href="mailto:hoanpmp@gmail.com">HoanPham</a>
- * @version Jul 14, 2015 11:03:51 AM
+ * @version 2015.1.0.1
  */
 public class DBUtil {
 	/** Database URL connect to the database */

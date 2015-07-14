@@ -13,6 +13,15 @@ import javax.xml.namespace.QName;
  * can consist of schema derived interfaces and classes representing the binding
  * of schema type definitions, element declarations and model groups. Factory
  * methods for each of these are provided in this class.
+ * </p>
+ * Title : <br/>
+ * Description : <br/>
+ * Copyright : Copyright (c) 2015<br/>
+ * Company : NCS <br/>
+ * Create on Jul 14, 2015 12:53:16 PM<br/>
+ * 
+ * @author <a href="mailto:hoanpmp@gmail.com">HoanPham</a>
+ * @version 2015.1.0.1
  */
 @XmlRegistry
 public class ObjectFactory {

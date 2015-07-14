@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Header>
+		<StreamingNo>SC20120910092958858</StreamingNo>
+		<TimeStamp>2012:09:10 09:29:59</TimeStamp>
+		<ActionType>5</ActionType>
+	</Header>
+	<Body>
+		<CustomerInfo>
+			<CustID>20120910092</CustID>
+			<CustTelNum>0912840027</CustTelNum>
+		</CustomerInfo>
+	</Body>
+</root>
+

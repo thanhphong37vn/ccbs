@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Header>
+		<StreamingNo>67567</StreamingNo>
+		<TimeStamp>20150121113645</TimeStamp>
+		<ActionType>6</ActionType>
+	</Header>
+	<Body>
+		<CustomerInfo>
+			<CustID>668</CustID>
+			<CustTelNum>0914726006</CustTelNum>
+			<ExtAttributes>
+				<EmpName>nguyen thi hong thu</EmpName>
+				<EmpTelNum>919220466</EmpTelNum>
+				<ExtNumber>405</ExtNumber>
+				<PackageType>E1</PackageType>
+				<EmpPosition>0</EmpPosition>
+				<EmpDivision>kinh doanh</EmpDivision>
+				<ChangeInfo>0</ChangeInfo>
+				<ExtStatus>1</ExtStatus>
+			</ExtAttributes>
+		</CustomerInfo>
+	</Body>
+</root>

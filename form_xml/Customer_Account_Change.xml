@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Header>
+		<StreamingNo>SC2012091009292221</StreamingNo>
+		<TimeStamp>2013:07:01 14:29:59</TimeStamp>
+		<ActionType>2</ActionType>
+	</Header>
+	<Body>
+		<CustomerInfo>
+			<CustID>20130628142959</CustID>
+			<CustName>Công ty NCSM</CustName>
+			<CustManager>LXK</CustManager>
+			<Position>Director</Position>
+			<Paperwork>Giấy phép kinh doanh so 1</Paperwork>
+			<LicenseNo>GPDK123</LicenseNo>
+			<DateOfIssue>20120910</DateOfIssue>
+			<IssuedBy>Sở kế hoạch đầu tư Hà nội</IssuedBy>
+			<TaxCode>7658123621</TaxCode>
+			<TradeType>telecom,comunication</TradeType>
+			<CustTelNum>0947908386</CustTelNum>
+			<AreaCode>4</AreaCode>
+			<CustEmail>vp@ncsmedia.com.vn</CustEmail>
+			<CustFax>043123123</CustFax>
+			<Description>MEG, eLearning, MeettingPlaza</Description>
+			<WebsiteUrl>ncsmedia.com.vn</WebsiteUrl>
+			<CustAddress>299 Trung kinh, Yen hoa, Cau giay, Ha noi</CustAddress>
+			<BillingAddress>299 Trung kinh, Yen hoa, Cau giay, Ha noi
+			</BillingAddress>
+			<AdminName>khoalx</AdminName>
+			<AdminTel>0936668376</AdminTel>
+			<AdminEmail>khoa.lx@ncsmedia.com.vn</AdminEmail>
+			<AdminPosition>Director</AdminPosition>
+			<PaymentMethod>P1</PaymentMethod>
+			<NoticeMethod>N1</NoticeMethod>
+		</CustomerInfo>
+		<Purchase>
+			<FeeNumber>0947908386</FeeNumber>
+			<CustIsFree>1</CustIsFree>
+			<SetupFee>100000</SetupFee>
+			<MaintainFee>300000</MaintainFee>
+			<PackageType>A1</PackageType>
+			<PackageName>ALO1</PackageName>
+			<SubscriberFee>45000</SubscriberFee>
+			<FreeMinutes>2000</FreeMinutes>
+			<ExtraAttributes>
+				<PackageExtra>V1</PackageExtra>
+				<ExtraFee>400000</ExtraFee>
+				<ExtraFreeMinutes>1000</ExtraFreeMinutes>
+			</ExtraAttributes>
+			<PurchaseAttributes>
+				<AttributeID>G1</AttributeID>
+				<AttributeValue>ConferenceCall</AttributeValue>
+				<IsActive>1</IsActive>
+			</PurchaseAttributes>
+			<PurchaseAttributes>
+				<AttributeID>G2</AttributeID>
+				<AttributeValue>Enhanced Management Service</AttributeValue>
+				<IsActive>0</IsActive>
+			</PurchaseAttributes>
+			<PurchaseAttributes>
+				<AttributeID>G3</AttributeID>
+				<AttributeValue>e-Sale</AttributeValue>
+				<IsActive>1</IsActive>
+			</PurchaseAttributes>
+		</Purchase>
+	</Body>
+</root>

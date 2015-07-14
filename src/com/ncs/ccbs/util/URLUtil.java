@@ -12,7 +12,7 @@ import java.net.URL;
  * Create on Jul 14, 2015 11:53:17 AM<br/>
  * 
  * @author <a href="mailto:hoanpmp@gmail.com">HoanPham</a>
- * @version Jul 14, 2015 11:53:17 AM
+ * @version 2015.1.0.1
  */
 public class URLUtil {
 	private static Logger	logger	=Logger

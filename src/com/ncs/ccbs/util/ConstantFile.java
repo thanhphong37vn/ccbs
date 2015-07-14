@@ -8,7 +8,7 @@ import java.io.File;
  * Create on Jul 14, 2015 10:34:10 AM<br/>
  * 
  * @author <a href="mailto:hoanpmp@gmail.com">HoanPham</a>
- * @version Jul 14, 2015 10:34:10 AM
+ * @version 2015.1.0.1
  */
 public class ConstantFile {
 	/** file name use to change customer account */
@@ -32,7 +32,7 @@ public class ConstantFile {
 	/** file name use to reactive MEG main */
 	public static String	Main_MEG_ReActive	          ="Main_MEG_ReActive.xls";
 	/** file name use to stop MEG main */
-	public static String	Main_MEG_Stop	              ="Main_MEG_Stop";
+	public static String	Main_MEG_Stop	              ="Main_MEG_Stop.xls";
 	/** file configuration the information connect to the database */
 	public static String	CONFIGURATION_FILE_DATABASE	="config.properties";
 	/**

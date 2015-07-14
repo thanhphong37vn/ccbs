@@ -14,7 +14,7 @@ import org.apache.log4j.Logger;
  * Create on Jul 14, 2015 12:03:23 PM<br/>
  * 
  * @author <a href="mailto:hoanpmp@gmail.com">HoanPham</a>
- * @version Jul 14, 2015 12:03:23 PM
+ * @version 2015.1.0.1
  */
 public class ExtExcelDao {
 	private static Logger	logger	=Logger

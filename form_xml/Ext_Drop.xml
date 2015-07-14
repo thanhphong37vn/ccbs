@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<Header>
+		<StreamingNo>SC20140423195500</StreamingNo>
+		<TimeStamp>2014:10:14 14:11:23</TimeStamp>
+		<ActionType>6</ActionType>
+	</Header>
+	<Body>
+		<CustomerInfo>
+			<CustID>4068</CustID>
+			<CustTelNum>0918652265</CustTelNum>
+			<ExtAttributes>
+				<EmpName>TRUONG DANG VIET DUNG</EmpName>
+				<EmpTelNum>949056921</EmpTelNum>
+				<ExtNumber>310</ExtNumber>
+				<PackageType>E1</PackageType>
+				<EmpPosition>1</EmpPosition>
+				<EmpDivision>rssouth</EmpDivision>
+				<ChangeInfo>0</ChangeInfo>
+				<ExtStatus>3</ExtStatus>
+			</ExtAttributes>
+		</CustomerInfo>
+	</Body>
+</root>
